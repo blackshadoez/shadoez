@@ -2,7 +2,7 @@ const Command = require('./command');
 
 module.exports = class extends Command {
   name = 'idle';
-  
+  category= 'Music'
   execute(msg) {
     const details = msg.guild.members.cache
       .filter(m => m.presence.status === 'idle')

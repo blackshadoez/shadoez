@@ -3,6 +3,6 @@ const config = require('../../config.json');
 
 const client = new OAuthClient(config.bot.id, config.bot.secret);
 client.setRedirect(`${config.dashboardURL}/auth`);
-client.setScopes('identify', 'guilds');
+client.setScopes('identify', 'guilds', 'bot');
 
 module.exports = client;
